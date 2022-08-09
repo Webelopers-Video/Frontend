@@ -1,12 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import './setup/wapp/initialize'
-
 import ReduxProvider from './setup/store'
 import ThemeProvider from './setup/theme'
 
-import App from './scenes/home'
+import App from './scenes/landing'
 
 ReactDOM.render(
   <React.StrictMode>

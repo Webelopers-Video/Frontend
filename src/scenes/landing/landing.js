@@ -1,9 +1,9 @@
 import Button from '../../components/button'
 
-export function Home() {
+export function Landing() {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Landing</h1>
       <Button>Click me!</Button>
     </div>
   )
