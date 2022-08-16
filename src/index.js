@@ -4,19 +4,15 @@ import ReactDOM from 'react-dom'
 import ReduxProvider from './setup/store'
 import ThemeProvider from './setup/theme'
 
-import App from './scenes/landing'
+import { Root } from './setup/root'
 
 ReactDOM.render(
   <React.StrictMode>
     <ReduxProvider>
       <ThemeProvider>
-        <App />
+        <Root />
       </ThemeProvider>
     </ReduxProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 )
-
-// import reportWebVitals from './setup/benchmark';
-// Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();
