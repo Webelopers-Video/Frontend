@@ -3,7 +3,7 @@ import { EventItem } from './event-item'
 
 export function Events() {
   return (
-    <Stack sx={{ p: '0 246px' }}>
+    <Stack sx={{ p: '0 246px 224px' }}>
       <Stack
         flexDirection="row"
         alignItems="center"
