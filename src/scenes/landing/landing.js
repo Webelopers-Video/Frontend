@@ -8,7 +8,7 @@ import { Footer } from '../../components/footer'
 
 export function Landing() {
   return (
-    <Stack>
+    <Stack sx={{ direction: 'rtl'}}>
       <NavBar />
       <Banners />
       <Events />
