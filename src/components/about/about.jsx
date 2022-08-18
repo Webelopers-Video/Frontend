@@ -1,18 +1,18 @@
-import { Button, Stack, Typography } from '@mui/material'
-import { Carousel } from '../carousel'
+import { Stack, styled, Typography } from '@mui/material'
 import { Stats } from '.'
+import { ContainedButton } from '../../common/buttons'
+
+const Container = styled(Stack)(() => ({
+  background: 'linear-gradient(180deg, #000328 0%, #00458E 100%)',
+  padding: '84px 0 376px 0',
+  boxSizing: 'border-box',
+  position: 'relative',
+  borderRadius: '0 0 120px 120px',
+}))
 
 export function About() {
   return (
-    <Stack
-      sx={{
-        background: 'linear-gradient(180deg, #000328 0%, #00458E 100%)',
-        padding: '84px 0 376px 0',
-        boxSizing: 'border-box',
-        position: 'relative',
-        borderRadius: '0 0 120px 120px',
-      }}
-    >
+    <Container>
       <Stack flexDirection="row" sx={{ marginRight: '240px' }}>
         <Typography
           fontSize="64px"
@@ -34,24 +34,13 @@ export function About() {
           <Typography fontSize="24px" fontWeight="400" color="#FFFFFF">
             اینجا هم یه توضیح ریزی بدید(بیشینه ۳ خط)
           </Typography>
-          <Button
-            sx={{
-              width: '181px',
-              height: '57px',
-              border: '1px solid #CBCBCB',
-              borderRadius: '73px',
-              fontSize: '16px',
-              fontWeight: '600',
-              color: '#FFFFFF',
-              marginRight: '33px',
-            }}
-          >
+          <ContainedButton width="181px" height="57px" borderRadius="73px">
             تاریخچه
-          </Button>
+          </ContainedButton>
         </Stack>
       </Stack>
-      <Carousel />
+      {/* TODO: Implement carousel here */}
       <Stats />
-    </Stack>
+    </Container>
   )
 }

@@ -1,18 +1,26 @@
-import { Box, Button, Stack, Typography } from '@mui/material'
+import { Box, Stack, styled, Typography } from '@mui/material'
+import { OutlinedButton } from '../../common/buttons'
 
-export function EventItem() {
+const Container = styled(Stack)(() => ({
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.25)',
+  borderRadius: '8px',
+  padding: '43px 75px 44px 84px',
+  boxSizing: 'border-box',
+  marginBottom: '48px',
+}))
+
+const EventImageFrame = styled(Box)(() => ({
+  width: '259px',
+  height: '197px',
+  backgroundColor: '#D9D9D9',
+  borderRadius: '4px',
+}))
+
+export function EventItem({ eventImage }) {
   return (
-    <Stack
-      flexDirection="row"
-      justifyContent="space-between"
-      sx={{
-        boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.25)',
-        borderRadius: '8px',
-        padding: '43px 75px 44px 84px',
-        boxSizing: 'border-box',
-        marginBottom: '48px',
-      }}
-    >
+    <Container>
       <Stack>
         <Typography fontSize="16px" fontWeight="700" color="#757575">
           مهلت ثبت‌نام تا:
@@ -27,16 +35,9 @@ export function EventItem() {
           دوشنبه
         </Typography>
       </Stack>
-      <Box
-        sx={{
-          width: '259px',
-          height: '197px',
-          bgcolor: '#D9D9D9',
-          borderRadius: '4px',
-        }}
-      >
-        <img alt="event-image" />
-      </Box>
+      <EventImageFrame>
+        <img src={eventImage} alt="event-image" />
+      </EventImageFrame>
       <Stack sx={{ width: '500px' }}>
         <Typography fontSize="32px" fontWeight="500" color="#06234E">
           عنوان رویداد
@@ -46,20 +47,10 @@ export function EventItem() {
         </Typography>
       </Stack>
       <Stack flexDirection="row" alignItems="flex-end">
-        <Button
-          sx={{
-            border: '2px solid #CBCBCB',
-            borderRadius: '73px',
-            width: '256px',
-            height: '52px',
-            color: '#06234E',
-            fontSize: '24px',
-            fontWeight: '500',
-          }}
-        >
+        <OutlinedButton width="270px" height="52px" fontSize="24px">
           اطلاعات بیشتر و ثبت‌نام
-        </Button>
+        </OutlinedButton>
       </Stack>
-    </Stack>
+    </Container>
   )
 }

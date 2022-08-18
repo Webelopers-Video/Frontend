@@ -1,5 +1,6 @@
-import { Button, Stack, Typography } from '@mui/material'
+import { Stack, Typography } from '@mui/material'
 import { EventItem } from './event-item'
+import { OutlinedButton } from '../../common/buttons'
 
 export function Events() {
   return (
@@ -13,19 +14,9 @@ export function Events() {
         <Typography fontSize="64px" fontWeight="400" color="#031127">
           رویدادهای دانشکده
         </Typography>
-        <Button
-          sx={{
-            border: '2px solid #CBCBCB',
-            borderRadius: '73px',
-            width: '277px',
-            height: '74px',
-            color: '#06234E',
-            fontSize: '32px',
-            fontWeight: '500',
-          }}
-        >
+        <OutlinedButton width="277px" height="74px">
           همه رویدادها
-        </Button>
+        </OutlinedButton>
       </Stack>
       <Stack>
         <EventItem />
