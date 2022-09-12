@@ -1,5 +1,5 @@
 import { Stack, styled, Typography } from '@mui/material'
-import { Stats } from '.'
+import { Stats } from './stats'
 import { ContainedButton } from '../../common/buttons'
 
 const Container = styled(Stack)(() => ({
