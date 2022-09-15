@@ -7,7 +7,7 @@ export function Professors() {
   return (
     <Stack sx={{ direction: 'rtl', fontFamily: 'IranSans !important' }}>
       <NavBar />
-     <Professor/>
+      <Professor />
       <Footer />
     </Stack>
   )
