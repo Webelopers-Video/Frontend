@@ -1,6 +1,10 @@
 import { Box, Stack, styled, Typography } from '@mui/material'
-import { InstagramIcon, LinkedinIcon, TelegramIcon, TwitterIcon } from '../icons'
-
+import {
+  InstagramIcon,
+  LinkedinIcon,
+  TelegramIcon,
+  TwitterIcon,
+} from '../icons'
 
 const Container = styled(Stack)(() => ({
   flexDirection: 'row',
@@ -9,7 +13,7 @@ const Container = styled(Stack)(() => ({
   backgroundColor: '#000329',
   padding: '0 142px 0 126px',
   height: '243px',
-  marginTop: '254px',
+  marginTop: '20px',
 }))
 
 const StyledImage = styled('img')(() => ({
