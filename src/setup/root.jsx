@@ -1,9 +1,5 @@
-import { Landing } from '../scenes/landing'
-import {Professors} from '../scenes/professors'
-import { Events } from '../scenes/events/events';
+import AllRoutes from './all-routes';
 
 export function Root() {
-  // return <Landing />
-  // return <Professors/>
-  return <Events />
+  return <AllRoutes />
 }
