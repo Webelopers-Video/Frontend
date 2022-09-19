@@ -1,4 +1,5 @@
 import { Box, Stack, styled, Typography } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 import { OutlinedButton } from '../../common/buttons'
 
 const Container = styled(Stack)(() => ({
@@ -19,6 +20,7 @@ const EventImageFrame = styled(Box)(() => ({
 }))
 
 export function EventItem({ eventImage }) {
+  const navigate = useNavigate()
   return (
     <Container>
       <Stack>
@@ -47,7 +49,7 @@ export function EventItem({ eventImage }) {
         </Typography>
       </Stack>
       <Stack flexDirection="row" alignItems="flex-end">
-        <OutlinedButton width="270px" height="52px" fontSize="24px">
+        <OutlinedButton width="270px" height="52px" fontSize="24px" onClick={() => navigate(`/events/test`)}>
           اطلاعات بیشتر و ثبت‌نام
         </OutlinedButton>
       </Stack>
