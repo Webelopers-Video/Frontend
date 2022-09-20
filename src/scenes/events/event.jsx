@@ -4,9 +4,8 @@ import { Footer } from '../../components/footer'
 import { NavBar } from '../../components/nav-bar'
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
-import { OutlinedButton } from '../../common/buttons/outlined-button'
-import { ContainedButton } from '../../common/buttons/contained-button'
 import { TitleIcon } from '../../components/events/title-icon'
+import { Button } from '../../common/buttons/button'
 
 const Event = () => {
   const event = {
@@ -34,28 +33,35 @@ const Event = () => {
       <NavBar />
       {/* TODO title goes here  */}
       <Stack
-        padding="50px"
-        margin="50px 15%"
-        borderRadius="20px"
+        padding="3%"
+        margin="5% 15%"
+        borderRadius="10px"
         sx={{
           background: 'linear-gradient(180deg, #000328 0%, #00458E 100%);',
         }}
       >
         <Container sx={{ display: 'flex', gap: 5 }}>
           <Stack width={'50%'}>
-            <Typography>{event.title}</Typography>
-            <Typography>{event.description}</Typography>
+            <Typography fontSize={56}>{event.title}</Typography>
+            <Typography fontSize={32} sx={{ wordWrap: 'break-word' }}>
+              {event.description}
+            </Typography>
           </Stack>
           <Stack gap={3} width={'50%'}>
             <Container sx={{ textAlign: 'center' }}>
-              <img src={event.logo} width="300px" height="250px" />
+              <img
+                style={{ borderRadius: '5px' }}
+                src={event.logo}
+                width="300px"
+                height="250px"
+              />
             </Container>
-            <Typography>شروع ثبت نام :</Typography>
+            <Typography fontSize={32}>شروع ثبت نام :</Typography>
             <TitleIcon Icon={CalendarTodayIcon}>{event.startDate}</TitleIcon>
             <TitleIcon Icon={AccessTimeIcon}>{event.startTime}</TitleIcon>
-            <Container sx={{ display: 'flex' }}>
-              <OutlinedButton>سایت رویداد</OutlinedButton>
-              <ContainedButton>ثبت نام</ContainedButton>
+            <Container sx={{ display: 'flex', gap: 5 }}>
+              <Button variant="outlined">سایت رویداد</Button>
+              <Button variant="contained">ثبت نام</Button>
             </Container>
           </Stack>
         </Container>
@@ -68,7 +74,7 @@ const Event = () => {
           }}
         >
           {event.pics.map(pic => (
-            <img src={pic} style={{ width: '100%' }} />
+            <img style={{ borderRadius: '5px', width: '100%' }} src={pic} />
           ))}
         </Container>
       </Stack>
