@@ -21,6 +21,9 @@ const EventImageFrame = styled(Box)(() => ({
 
 export function EventItem({ eventImage }) {
   const navigate = useNavigate()
+  const event = {
+    name: 'datadays'
+  }
   return (
     <Container>
       <Stack>
@@ -49,7 +52,7 @@ export function EventItem({ eventImage }) {
         </Typography>
       </Stack>
       <Stack flexDirection="row" alignItems="flex-end">
-        <OutlinedButton width="270px" height="52px" fontSize="24px" onClick={() => navigate(`/events/test`)}>
+        <OutlinedButton width="270px" height="52px" fontSize="24px" onClick={() => navigate(`/events/${event.name}`)}>
           اطلاعات بیشتر و ثبت‌نام
         </OutlinedButton>
       </Stack>

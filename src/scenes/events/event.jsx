@@ -7,7 +7,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import { TitleIcon } from '../../components/events/title-icon'
 import { Button } from '../../common/buttons/button'
 
-const Event = () => {
+export const Event = () => {
   const event = {
     title: 'عنوان رویداد',
     description:
@@ -84,4 +84,3 @@ const Event = () => {
   )
 }
 
-export default Event
