@@ -1,6 +1,6 @@
 import { Button } from '@mui/material'
 
-export function OutlinedButton({ width, height, borderRadius, fontSize, children }) {
+export function OutlinedButton({ width, height, borderRadius, fontSize, children, onClick }) {
   return (
     <Button
       sx={{
@@ -12,6 +12,7 @@ export function OutlinedButton({ width, height, borderRadius, fontSize, children
         fontSize,
         fontWeight: '500',
       }}
+      onClick={onClick}
     >
       {children}
     </Button>

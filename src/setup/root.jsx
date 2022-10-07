@@ -1,7 +1,5 @@
-import { Landing } from '../scenes/landing'
-import {Professors} from '../scenes/professors'
+import AllRoutes from './all-routes';
 
 export function Root() {
-  // return <Landing />
-  return <Professors/>
+  return <AllRoutes />
 }
